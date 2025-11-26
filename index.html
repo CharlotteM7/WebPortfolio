@@ -4,15 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Charlotte Mackay — Software Engineer & Web Developer</title>
+    <title>Charlotte Mackay – Software Engineer & Web Developer</title>
     <meta name="description"
         content="Portfolio of Charlotte Mackay - front-end focused software engineer building accessible, performant web apps." />
     <link rel="canonical" href="https://charlottemackay.dev/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
     <meta property="og:title" content="Charlotte Mackay - Software Engineer & Web Developer">
     <meta property="og:description" content="Front-end & full-stack engineer. React, TypeScript, accessibility, DX.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#111827">
+    <meta name="theme-color" content="#0f1724">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
   {
@@ -42,7 +48,7 @@
                     <div>Software Engineer • Front-end & Full-stack</div>
                 </div>
             </div>
-            <nav aria-label="Primary">
+            <nav aria-label="Primary navigation">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
@@ -58,26 +64,26 @@
                     <p>Front-end engineering, UI architecture, and DX. Interfaces that are fast, reliable, and simple.
                     </p>
                     <div class="cta" role="group" aria-label="Primary actions">
-                        <a class="btn" href="#projects">See projects</a>
-                        <a class="secondary" href="#contact">Get in touch</a>
+                        <a class="btn" href="#projects" aria-label="View my projects">See projects</a>
+                        <a class="secondary" href="#contact" aria-label="Get in touch with me">Get in touch</a>
                     </div>
                 </div>
 
-                <aside class="hero-card" aria-labelledby="hero-meta">
-                    <div id="hero-meta" class="meta"></div>
+                <aside class="hero-card" aria-labelledby="hero-card-title">
+                    <div id="hero-meta" class="meta" aria-live="polite" aria-atomic="true"></div>
                     <div>
-                        <strong>Core skills</strong>
-                        <div class="skill-list">
-                            <div class="skill">JavaScript</div>
-                            <div class="skill">React / Next.js</div>
-                            <div class="skill">Node.js</div>
-                            <div class="skill">Accessibility</div>
-                            <div class="skill">Testing</div>
+                        <strong id="hero-card-title">Core skills</strong>
+                        <div class="skill-list" role="list" aria-label="Technical skills">
+                            <div class="skill" role="listitem">JavaScript</div>
+                            <div class="skill" role="listitem">React / Next.js</div>
+                            <div class="skill" role="listitem">Node.js</div>
+                            <div class="skill" role="listitem">Accessibility</div>
+                            <div class="skill" role="listitem">Testing</div>
                         </div>
                     </div>
                     <div>
                         <div>Open to new projects</div>
-                        <a class="link" href="mailto:charlottemackay7@gmail.com">Email</a>
+                        <a class="link" href="mailto:charlottemackay7@gmail.com" aria-label="Email Charlotte Mackay">Email</a>
                     </div>
                 </aside>
             </section>
@@ -90,31 +96,30 @@
 
             <section id="projects" aria-labelledby="projects-title">
                 <h2 id="projects-title">Selected projects</h2>
-                <div class="projects">
+                <div class="projects" role="list">
 
-                    <article class="card" aria-labelledby="p-tjp">
-                        <div class="thumbnail" role="img" aria-label="Client project: TJP Tours website">TJP Tours</div>
+                    <article class="card" role="listitem" aria-labelledby="p-tjp">
+                        <div class="thumbnail" role="img" aria-label="TJP Tours website preview">TJP Tours</div>
                         <h3 id="p-tjp">TJP Tours · Custom WordPress Theme</h3>
                         <p>Commercial site for a UK tour and merchandising company. Built a fully bespoke WordPress
                             theme with PHP templates and Microsoft 365 email
                             integration. Focused on performance, accessibility, and maintainability.</p>
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">Custom Theme</span>
-                            <span class="tag">Responsive Design</span>
-
+                        <div class="tags" role="list" aria-label="Technologies used">
+                            <span class="tag" role="listitem">WordPress</span>
+                            <span class="tag" role="listitem">PHP</span>
+                            <span class="tag" role="listitem">Custom Theme</span>
+                            <span class="tag" role="listitem">Responsive Design</span>
                         </div>
-                        <div class="proj-links">
+                        <div class="proj-links" role="group" aria-label="Project links">
                             <a class="link" href="https://tjptours.com/" target="_blank"
-                                rel="noopener noreferrer">Live</a>
+                                rel="noopener noreferrer" aria-label="View TJP Tours live site">Live</a>
                             <a class="link" href="https://github.com/CharlotteM7/tjp-theme" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
+                                rel="noopener noreferrer" aria-label="View TJP Tours source code on GitHub">GitHub</a>
                         </div>
                     </article>
 
-                    <article class="card" aria-labelledby="p-puzzle">
-                        <div class="thumbnail" role="img" aria-label="Interactive puzzle-solving web app">Puzzle Solver
+                    <article class="card" role="listitem" aria-labelledby="p-puzzle">
+                        <div class="thumbnail" role="img" aria-label="Puzzle Solver app preview">Puzzle Solver
                         </div>
                         <h3 id="p-puzzle">Puzzle Solver · Interactive web app</h3>
                         <p>Degree - Group Project. <br>
@@ -122,19 +127,23 @@
                             and a 3D Polysphere Pyramid. Built in React with three.js rendering,
                             it visualises solver state and lets users place pieces and validate solutions
                             in real time.</p>
-                        <div class="tags"><span class="tag">React</span><span class="tag">Algorithms</span><span
-                                class="tag">Jest</span><span class="tag">Git</span><span class="tag">three.js</span>
+                        <div class="tags" role="list" aria-label="Technologies used">
+                            <span class="tag" role="listitem">React</span>
+                            <span class="tag" role="listitem">Algorithms</span>
+                            <span class="tag" role="listitem">Jest</span>
+                            <span class="tag" role="listitem">Git</span>
+                            <span class="tag" role="listitem">three.js</span>
                         </div>
-                        <div class="proj-links">
+                        <div class="proj-links" role="group" aria-label="Project links">
                             <a class="link" href="https://portfolio.tedalden.dev/puzzle-solver/" target="_blank"
-                                rel="noopener noreferrer">Live</a>
+                                rel="noopener noreferrer" aria-label="View Puzzle Solver live demo">Live</a>
                             <a class="link" href="https://github.com/CharlotteM7/puzzle-solver" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
+                                rel="noopener noreferrer" aria-label="View Puzzle Solver source code on GitHub">GitHub</a>
                         </div>
                     </article>
 
-                    <article class="card" aria-labelledby="p-pay">
-                        <div class="thumbnail" role="img" aria-label="Payments web app">Online Payments</div>
+                    <article class="card" role="listitem" aria-labelledby="p-pay">
+                        <div class="thumbnail" role="img" aria-label="Money Transfer app preview">Online Payments</div>
                         <h3 id="p-pay">Money Transfer · Payments & Security</h3>
                         <p>Degree Project. <br>
                             Full-stack Django web app simulating a secure online payment and money-transfer service with
@@ -142,13 +151,18 @@
                             CRUD dashboards. Deployed on AWS and
                             designed for scalability, accessibility, and clean architecture.</p>
 
-                        <div class="tags"><span class="tag">Django</span><span class="tag">AWS</span><span
-                                class="tag">REST API</span><span class="tag">Bootstrap</span><span
-                                class="tag">Thrift</span><span class="tag">PostgreSQL</span><span
-                                class="tag">Auth</span></div>
-                        <div class="proj-links">
+                        <div class="tags" role="list" aria-label="Technologies used">
+                            <span class="tag" role="listitem">Django</span>
+                            <span class="tag" role="listitem">AWS</span>
+                            <span class="tag" role="listitem">REST API</span>
+                            <span class="tag" role="listitem">Bootstrap</span>
+                            <span class="tag" role="listitem">Thrift</span>
+                            <span class="tag" role="listitem">PostgreSQL</span>
+                            <span class="tag" role="listitem">Auth</span>
+                        </div>
+                        <div class="proj-links" role="group" aria-label="Project links">
                             <a class="link" href="https://github.com/CharlotteM7/webapps2025" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
+                                rel="noopener noreferrer" aria-label="View Money Transfer source code on GitHub">GitHub</a>
                         </div>
                     </article>
                 </div>
@@ -156,16 +170,15 @@
 
             <section id="education" aria-labelledby="edu-title">
                 <h2 id="edu-title">Education</h2>
-                <div class="timeline">
-                    <div class="time-item">
+                <div class="timeline" role="list" aria-label="Education history">
+                    <div class="time-item" role="listitem">
                         <div>
                             <strong>MSc Advanced Computer Science</strong>
                             <div>University of Sussex · 2024-2025</div>
                         </div>
                         <div>Distinction</div>
-
                     </div>
-                    <div class="time-item">
+                    <div class="time-item" role="listitem">
                         <div>
                             <strong>BSc Computer Science for Games</strong>
                             <div>University of Brighton · 2021-2024</div>
@@ -175,24 +188,24 @@
                 </div>
             </section>
 
-            <section id="experience" aria-labelledby="exp-title-1">
-                <h2 id="exp-title-1">Experience</h2>
-                <div class="timeline">
-                    <div class="time-item">
+            <section id="experience" aria-labelledby="exp-title">
+                <h2 id="exp-title">Experience</h2>
+                <div class="timeline" role="list" aria-label="Work experience">
+                    <div class="time-item" role="listitem">
                         <div>
                             <strong>Data Subject Access Request Advisor</strong>
                             <div>2021-2025</div>
                         </div>
                         <div></div>
                     </div>
-                    <div class="time-item">
+                    <div class="time-item" role="listitem">
                         <div>
                             <strong>Training & Project Manager</strong>
                             <div>2019-2021</div>
                         </div>
                         <div>Led onboarding, continuous training, and process tooling.</div>
                     </div>
-                    <div class="time-item">
+                    <div class="time-item" role="listitem">
                         <div>
                             <strong>Customer Services Manager</strong>
                             <div>2017-2019</div>
@@ -206,15 +219,16 @@
                 <h2 id="contact-title">Contact</h2>
                 <div class="contact-grid">
                     <div class="contact-actions">
-                        <a class="btn" href="mailto:charlottemackay7@gmail.com">Email</a>
-                        <button type="button" class="secondary" id="downloadResume">CV (PDF)</button>
+                        <a class="btn" href="mailto:charlottemackay7@gmail.com" aria-label="Send email to Charlotte Mackay">Email</a>
+                        <button type="button" class="secondary" id="downloadResume" aria-label="Download CV as PDF">CV (PDF)</button>
                     </div>
 
                     <aside class="contact-meta">
                         <div>Prefer email? <a href="mailto:charlottemackay7@gmail.com">charlottemackay7@gmail.com</a>
                         </div>
-                        <div class="socials" aria-label="Social links">
-                            <a href="https://github.com/CharlotteM7" target="_blank" rel="noopener noreferrer">
+                        <div class="socials" role="list" aria-label="Social media links">
+                            <a href="https://github.com/CharlotteM7" target="_blank" rel="noopener noreferrer" 
+                               role="listitem" aria-label="Visit Charlotte's GitHub profile">
                                 <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                                     <path
                                         d="M12 2C6.48 2 2 6.58 2 12.17c0 4.52 2.87 8.36 6.84 9.71.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.49-1.1-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.64-1.36-2.22-.26-4.56-1.13-4.56-5.03 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04a9.2 9.2 0 0 1 2.5-.35c.85 0 1.7.12 2.5.35 1.9-1.31 2.74-1.04 2.74-1.04.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.73 0 3.91-2.34 4.76-4.57 5.02.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .27.18.58.69.49A10.2 10.2 0 0 0 22 12.17C22 6.58 17.52 2 12 2z"
@@ -222,8 +236,8 @@
                                 </svg>
                                 <strong>GitHub</strong>
                             </a>
-                            <a href="https://www.linkedin.com/in/charlotte-mackay" target="_blank"
-                                rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/charlotte-mackay" target="_blank" rel="noopener noreferrer"
+                               role="listitem" aria-label="Visit Charlotte's LinkedIn profile">
                                 <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                                     <path
                                         d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h3.97V24H.5V8zM8.5 8h3.8v2.2h.1c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.78 2.66 4.78 6.12V24h-3.98v-6.6c0-1.57-.03-3.59-2.19-3.59-2.2 0-2.53 1.72-2.53 3.49V24H8.5V8z"
@@ -237,7 +251,7 @@
             </section>
 
             <footer role="contentinfo">
-                <small>© <span id="year"></span> Charlotte Mackay</small>
+                <small>© <span id="year" aria-label="Copyright year"></span> Charlotte Mackay</small>
             </footer>
         </main>
     </div>
