@@ -30,9 +30,10 @@ document.querySelectorAll('.card, .time-item, section').forEach(el => {
 // Dynamic hero meta with typing effect
 const metaEl = document.getElementById('hero-meta');
 const phrases = [
-  'Building performant, inclusive web products',
-  'React and TypeScript specialist',
-  'Design systems and polished DX'
+  "React & TypeScript",
+  "Full-stack problem solving",
+  "Clean, accessible UI",
+  "Fast learner, always improving"
 ];
 
 let phraseIndex = 0;
@@ -43,26 +44,37 @@ function typeEffect() {
   const current = phrases[phraseIndex];
 
   if (!isDeleting) {
-    metaEl.textContent = current.substring(0, charIndex + 1);
+    // typing forwards
     charIndex++;
+    metaEl.textContent = current.substring(0, charIndex);
+
     if (charIndex === current.length) {
       isDeleting = true;
-      setTimeout(typeEffect, 2000);
+      setTimeout(typeEffect, 1500); // pause on full phrase
       return;
     }
   } else {
-    metaEl.textContent = current.substring(0, charIndex - 1);
+    // deleting
     charIndex--;
-    if (charIndex === 0) {
+
+    // IMPORTANT: don't ever go fully empty, keep a space so the line height stays
+    if (charIndex <= 0) {
+      metaEl.textContent = " ...";
+      charIndex = 0;
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      setTimeout(typeEffect, 500);
+      setTimeout(typeEffect, 400); // small pause before next phrase
       return;
     }
+
+    metaEl.textContent = current.substring(0, charIndex);
   }
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
+
+  setTimeout(typeEffect, isDeleting ? 45 : 80);
 }
+
 typeEffect();
+
 
 // Active nav highlight on scroll
 const sections = document.querySelectorAll('section[id]');
