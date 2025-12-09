@@ -376,20 +376,20 @@ h2 {
   flex-wrap: wrap;
 }
 .link{
-  color:var(--text);                              
-  text-decoration:none;
-  font-weight:700;
-  padding:8px 10px;
-  border-radius:9px;
-  background:rgba(255,255,255,.06);              
-  border:1px solid rgba(255,255,255,.28);         
-  transition:border-color .15s ease,color .15s ease,background .15s ease;
+  color: var(--accent-2);  
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 9px;
+  background: rgba(255,255,255,.06);              
+  border: 1px solid rgba(255,255,255,.28);         
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
 }
 
 .link:hover{
-  border-color:var(--accent);
-  background:rgba(109,220,255,.12);
-  color:var(--accent);
+  border-color: var(--accent);
+  background: rgba(109,220,255,.12);
+  color: var(--accent);
 }
 
 
